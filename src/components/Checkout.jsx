@@ -29,7 +29,7 @@ const Checkout = () => {
       const {
         unitAmount,
         currency
-      } = await fetch('/api/config').then(r => r.json());
+      } = await fetch('/api/payment').then(r => r.json());
       setAmount(unitAmount);
       setCurrency(currency);
     }
@@ -52,7 +52,7 @@ const Checkout = () => {
               />
             </div>
           </div>
-          <form action="/api/create-checkout-session" method="POST">
+          <form action="/api/payment" method="POST">
             <div className="quantity-setter">
               <button
                 className="increment-btn"
