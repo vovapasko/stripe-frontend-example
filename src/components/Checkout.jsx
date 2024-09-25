@@ -52,7 +52,7 @@ const Checkout = () => {
               />
             </div>
           </div>
-          <form action="/api/payment" method="POST">
+          <form action="/api/checkout-session" method="POST">
             <div className="quantity-setter">
               <button
                 className="increment-btn"
